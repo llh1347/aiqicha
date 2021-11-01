@@ -7,8 +7,8 @@ def get_ua(brower_name):
     useragent = choice(get(url).json()[brower_name])
     return useragent
 def tgpush(content):
-    bot_token = token
-    user_id = id
+    bot_token = "2019955858:AAGSle82TKXmBlRflFkQsCcsVbI2ITtmWMs"
+    user_id = "1221439998"
     url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
     headers = {'Content-Type': 'application/x-www-form-urlencoded'}
     data = {'chat_id': str(user_id), 'text': content, 'disable_web_page_preview': 'true'}
