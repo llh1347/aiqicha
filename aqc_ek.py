@@ -2,6 +2,7 @@
 #不要问cron怎么写，自己看自己机器决定，再问就是* * * * * *
 from requests import get, post
 from random import choice
+import os
 def get_ua(brower_name):
     url = 'https://raw.githubusercontent.com/limoruirui/misaka/master/user-agent.json'
     useragent = choice(get(url).json()[brower_name])
