@@ -27,7 +27,7 @@ def get_status():
       'User-Agent': get_ua('Safari'),
       'Referer': f'https://aiqicha.baidu.com/m/usercenter/exchangeList?VNK={randomstr(8)}'
     }
-    if get(url, headers=headers).json()['data']['AQ03008'] == 1:
+    if get(url, headers=headers).json()['data']['AQ03006'] == 1:
         tgpush('爱企查京东e卡有货，请进行兑换')
 if __name__ == '__main__':
     get_status()
