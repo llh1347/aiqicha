@@ -1,0 +1,32 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v2
+        with:
+          ref: main
+
+      - name: Setup python
+        uses: actions/setup-node@v1
+        with:
+          node-version: "3.x"
+
+      - name: Build project
+        run: yarn && yarn build
+
+      - name: Upload COS
+        uses: actions/checkout@v2
+        with:
+          args: delete -r -f / && upload -r ./dist/ /
+          token: ${{ secrets.TOKEN }}
+          id: ${{ secrets.ID }}
+          region: ap-shanghai
