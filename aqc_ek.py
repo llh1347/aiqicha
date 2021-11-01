@@ -30,4 +30,6 @@ def get_status():
     if get(url, headers=headers).json()['data']['AQ03006'] == 1:
         tgpush('爱企查京东e卡有货，请进行兑换')
 if __name__ == '__main__':
+    id = os.environ["id"]
+    token = os.environ["token"]
     get_status()
