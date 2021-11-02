@@ -17,6 +17,27 @@ def tgpush(content):
         req = post(url, headers=headers, data=data)
     except:
         print('推送失败')
+def pushplus_bot(title, content):
+    try:
+        print("\n")
+        print("PUSHPLUS服务启动")
+        url = 'http://www.pushplus.plus/send'
+        data = {
+            "token": pushplus,
+            "title": title,
+            "content": content
+        }
+        body = json.dumps(data).encode(encoding='utf-8')
+        headers = {'Content-Type': 'application/json'}
+        response = requests.post(url=url, data=body, headers=headers).json()
+        if response['code'] == 200:
+            print('推送成功！')
+        else:
+            print('推送失败！')
+    except Exception as e:
+        print(e)
+# 企业微信 APP 推送
+   
 def randomstr(numb):
     str = ''
     for i in range(numb):
@@ -28,9 +49,11 @@ def get_status():
       'User-Agent': get_ua('Safari'),
       'Referer': f'https://aiqicha.baidu.com/m/usercenter/exchangeList?VNK={randomstr(8)}'
     }
-    if get(url, headers=headers).json()['data']['AQ03008'] == 1:
+    if get(url, headers=headers).json()['data']['AQ03006'] == 1:
         tgpush('爱企查京东e卡有货，请进行兑换')
+        pushplus_bot('爱企查E卡监控', '爱企查京东e卡有货，请进行兑换')
 if __name__ == '__main__':
     id = os.environ["id"]
     token = os.environ["token"]
+    pushplus = os.environ["pushplus"]
     get_status()
