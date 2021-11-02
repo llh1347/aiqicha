@@ -3,6 +3,7 @@
 from requests import get, post
 from random import choice
 import os
+import json
 def get_ua(brower_name):
     url = 'https://raw.githubusercontent.com/limoruirui/misaka/master/user-agent.json'
     useragent = choice(get(url).json()[brower_name])
