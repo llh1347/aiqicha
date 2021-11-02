@@ -23,4 +23,5 @@ jobs:
         env: 
           id: ${{secrets.ID}}
           token: ${{secrets.TOKEN}}
+          pushplus: ${{secrets.PUSHPLUS}}
         run: python3 aqc_ek.py
