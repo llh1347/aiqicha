@@ -51,9 +51,11 @@ def get_status():
       'User-Agent': get_ua('Safari'),
       'Referer': f'https://aiqicha.baidu.com/m/usercenter/exchangeList?VNK={randomstr(8)}'
     }
-    if get(url, headers=headers).json()['data']['AQ03006'] == 1:
+    if get(url, headers=headers).json()['data']['AQ03008'] == 1:
         tgpush('爱企查京东e卡有货，请进行兑换')
         pushplus_bot('爱企查E卡监控', '爱企查京东e卡有货，请进行兑换')
+    else:
+        print('E卡无货')
 if __name__ == '__main__':
     id = os.environ["id"]
     token = os.environ["token"]
