@@ -52,8 +52,8 @@ def get_status():
       'Referer': f'https://aiqicha.baidu.com/m/usercenter/exchangeList?VNK={randomstr(8)}'
     }
     if get(url, headers=headers).json()['data']['AQ03008'] == 1:
-        tgpush('爱企查京东e卡有货，请进行兑换')
-        pushplus_bot('爱企查E卡监控', '爱企查京东e卡有货，请进行兑换')
+        tgpush('京东e卡有货，速去偷撸～')
+        pushplus_bot('爱企查E卡监控', '京东e卡有货，速去偷撸～')
     else:
         print('E卡无货')
 if __name__ == '__main__':
