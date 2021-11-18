@@ -53,7 +53,7 @@ def get_status():
     }
     if get(url, headers=headers).json()['data']['AQ03006'] == 1:
         tgpush('爱奇艺月卡有货，速去偷撸～')
-        pushplus_bot('爱企查E卡监控', '爱奇艺月卡有货，速去偷撸～')
+        pushplus_bot('爱企查爱奇艺月卡监控', '爱奇艺月卡有货，速去偷撸～')
     else:
         print('爱奇艺月卡无货')
 if __name__ == '__main__':
