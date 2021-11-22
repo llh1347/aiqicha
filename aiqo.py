@@ -55,7 +55,7 @@ if response.status_code == 200:
     response = json.loads(re.findall("{.*}", response.text)[0])
     # print(response)
     if int(response["jsonResult"]["code"]) == 0:  # jsonResult.data.dataList[0].stockValue
-        if response["jsonResult"]["data"]["dataList"][0]["stockValue"] > 0:
+        if response["jsonResult"]["data"]["dataList"][0]["stockValue"] < 0:
             print("奥拉星柔软抱枕有货了，快去兑换")
             push("奥拉星柔软抱枕有货了，快去兑换")
         else:
