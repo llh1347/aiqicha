@@ -7,7 +7,7 @@ time0 = time.time()
 
 def push(msg):
     # 自用推送
-    corpid = ''
+    corpid = 'ww6e434739ee7f24cd'
     corpsecret = ''
     agentid = ''
     touser = '@all'
