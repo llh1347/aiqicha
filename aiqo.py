@@ -9,7 +9,7 @@ def push(msg):
     # 自用推送
     corpid = 'ww6e434739ee7f24cd'
     corpsecret = 'vvqCzBbxvRQJEFaICx9OQ-gg_47cFwko7AWmj72u5S0'
-    agentid = ''
+    agentid = '1000002'
     touser = '@all'
 
     value = json.dumps({
