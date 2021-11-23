@@ -19,7 +19,7 @@ jobs:
           python-version: 3.9
       - name: 'Install requirements'
         run: pip install -r ./requirements.txt
-      - name: 'aiqicha_aqy'     
+      - name: 'aiqo'     
         env: 
           id: ${{secrets.ID}}
           token: ${{secrets.TOKEN}}
