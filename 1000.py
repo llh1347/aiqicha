@@ -3,7 +3,7 @@ import base64
 import requests
 
 # plus推送
-PUSH_PLUS_TOKEN = ''
+PUSH_PLUS_TOKEN = 'c2c2b2a170a7406689b2b292fefcea3d'
 
 #config_list = [
 #    {"mobile": "1234567", "food": False}
