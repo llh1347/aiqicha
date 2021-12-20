@@ -31,7 +31,7 @@ def push(msg):
 
 
 time0 = int(time0 * 1000)
-url = f"http://service.100bt.com/creditmall/mall/page.jsonp?callback=jQuery17205352076733403225_1637631202861&pageIndex=11&pageSize=1&orderBy=1&_={time0}"
+url = f"http://service.100bt.com/creditmall/mall/page.jsonp?callback=jQuery17209362052322033279_1639983925597&pageIndex=20&pageSize=1&orderBy=1&_={time0}"
 
 payload = {'pageIndex': '20',
            'pageSize': '1',
