@@ -51,7 +51,7 @@ def get_status():
       'User-Agent': get_ua('Safari'),
       'Referer': f'https://aiqicha.baidu.com/m/usercenter/exchangeList?VNK={randomstr(8)}'
     }
-    if get(url, headers=headers).json()['data']['AQ03008'] == 1:
+    if get(url, headers=headers).json()['data']['AQ03010'] == 1:
         tgpush('网盘会员有货，速去偷撸～')
         pushplus_bot('网盘会员监控', '网盘会员有货，速去偷撸～')
     else:
