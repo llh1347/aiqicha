@@ -8,7 +8,7 @@ on:
   - cron: '0 8 * * *' 
 
 jobs:
-  ek:
+  wphy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
